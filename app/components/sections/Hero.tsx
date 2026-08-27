@@ -4,7 +4,7 @@ const Hero = () => {
     return (
         <section
             id="home"
-            className="flex min-h-screen items-center px-6 py-20"
+            className="flex min-h-screen items-center px-6 py-20 "
         >
             <div className="mx-auto w-full max-w-6xl">
                 <p className="mb-4 text-lg font-medium text-blue-600">
