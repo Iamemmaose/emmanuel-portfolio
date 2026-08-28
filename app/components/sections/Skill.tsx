@@ -56,7 +56,7 @@ const skillCategories: SkillCategory[] = [
 
 const Skill = () => {
   return (
-    <section id="skills" className="bg-gray-50 px-6 py-20">
+    <section id="skills" className="bg-white px-6 py-20">
       <div className="mx-auto max-w-6xl ">
         {/* Section heading */}
         <div className="max-w-2xl">

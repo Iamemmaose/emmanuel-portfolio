@@ -4,7 +4,7 @@ import { projects } from "@/app/data/Projects";
 
 const Projects = () => {
     return (
-        <section id="projects" className="bg-white py-20">
+        <section id="projects" className="bg-gray-50 text-gray-800 py-20">
             <div className="mx-auto max-w-6xl px-6">
                 {/* Section heading */}
                 <div className="max-w-2xl">
@@ -78,7 +78,9 @@ const Projects = () => {
                             </div>
                         </article>
                     ))}
-                    <div className="mt-12 text-center">
+                    
+                </div>
+                <div className="mt-12 text-center">
                         <a
                             href="https://github.com/Iamemmaose"
                             target="_blank"
@@ -88,7 +90,6 @@ const Projects = () => {
                             See More Projects on GitHub
                         </a>
                     </div>
-                </div>
             </div>
         </section>
     );
