@@ -7,9 +7,10 @@ interface StatItem {
 }
 
 const stats: StatItem[] = [
-    { id: 1, label: "Years Experience", value: "2+" },
+    { id: 1, label: "Years Experience", value: "1+" },
     { id: 2, label: "Projects Completed", value: "10+" },
     { id: 3, label: "Technologies Used", value: "8+" },
+    { id: 3, label: "Mentees Taught", value: "50+" }
 ];
 
 export default function About() {
@@ -24,6 +25,7 @@ export default function About() {
                             src="/images/emmanuel-ose.jpg"
                             alt="Emmanuel Ose"
                             fill
+                            priority
                             sizes="(max-width: 640px) 256px, 320px"
                             className="object-cover"
                         />
@@ -32,7 +34,7 @@ export default function About() {
 
                 {/* Right Column: Bio Content */}
                 <div className="flex flex-col gap-6">
-                    <div className="inline-block px-3 py-1 text-sm font-semibold text-blue-700 bg-blue-100 rounded-full w-fit">
+                    <div className="text-sm font-semibold text-blue-600">
                         About Me
                     </div>
 

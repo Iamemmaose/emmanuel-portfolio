@@ -1,57 +1,97 @@
+import Image from "next/image";
 import Link from "next/link";
-import { projects } from "@/app/data/Projects"
+import { projects } from "@/app/data/Projects";
 
 const Projects = () => {
-  return (
-    <section id="projects">
-      <div>
-        <p>Featured Work</p>
-        <h2>Projects I've Built</h2>
-        <p>
-          A selection of projects that demonstrate my frontend development
-          skills and experience building responsive, user-focused interfaces.
-        </p>
-      </div>
+    return (
+        <section id="projects" className="bg-white py-20">
+            <div className="mx-auto max-w-6xl px-6">
+                {/* Section heading */}
+                <div className="max-w-2xl">
+                    <p className="text-sm font-semibold text-blue-600">
+                        Featured Work
+                    </p>
 
-      <div>
-        {projects.map((project) => (
-          <article key={project.id}>
-            <h3>{project.title}</h3>
+                    <h2 className="mt-3 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                        Projects I've Built
+                    </h2>
 
-            <p>{project.description}</p>
+                    <p className="mt-4 text-lg leading-8 text-gray-600">
+                        A selection of projects that demonstrate my frontend development
+                        skills and experience building responsive, user-focused interfaces.
+                    </p>
+                </div>
 
-            <ul>
-              {project.technologies.map((technology) => (
-                <li key={technology}>{technology}</li>
-              ))}
-            </ul>
+                {/* Project cards */}
+                <div className="mt-12 grid gap-8 md:grid-cols-2">
+                    {projects.map((project, index) => (
+                        <article
+                            key={project.id}
+                            className="overflow-hidden rounded-xl border border-gray-200 bg-white transition hover:-translate-y-1 hover:shadow-lg"
+                        >
+                            {/* Project image */}
+                            <div className="relative aspect-video w-full overflow-hidden bg-gray-100">
+                                <Image
+                                    src={project.image}
+                                    alt={`${project.title} project screenshot`}
+                                    fill
+                                    priority={index === 0}
+                                    className="object-cover"
+                                />
+                            </div>
 
-            <div>
-              {project.liveUrl && (
-                <Link
-                  href={project.liveUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Live Demo
-                </Link>
-              )}
+                            {/* Project content */}
+                            <div className="p-6">
+                                <h3 className="text-xl font-bold text-gray-900">
+                                    {project.title}
+                                </h3>
 
-              {project.githubUrl && (
-                <Link
-                  href={project.githubUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  View Code
-                </Link>
-              )}
+                                <p className="mt-3 leading-7 text-gray-600">
+                                    {project.description}
+                                </p>
+
+                                {/* Technologies */}
+                                <div className="mt-5 flex flex-wrap gap-2">
+                                    {project.technologies.map((technology) => (
+                                        <span
+                                            key={technology}
+                                            className="rounded-full bg-blue-50 px-3 py-1 text-sm font-medium text-blue-700"
+                                        >
+                                            {technology}
+                                        </span>
+                                    ))}
+                                </div>
+
+                                {/* Project links */}
+                                <div className="mt-6 flex flex-wrap gap-4">
+                                    {project.liveUrl && (
+                                        <Link
+                                            href={project.liveUrl}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="rounded-lg bg-blue-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-blue-700"
+                                        >
+                                            Live Demo
+                                        </Link>
+                                    )}
+                                </div>
+                            </div>
+                        </article>
+                    ))}
+                    <div className="mt-12 text-center">
+                        <a
+                            href="https://github.com/Iamemmaose"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-2 rounded-xl border border-gray-300 bg-white px-6 py-3 text-sm font-semibold text-gray-700 hover:bg-gray-50 transition"
+                        >
+                            See More Projects on GitHub
+                        </a>
+                    </div>
+                </div>
             </div>
-          </article>
-        ))}
-      </div>
-    </section>
-  );
+        </section>
+    );
 };
 
 export default Projects;
