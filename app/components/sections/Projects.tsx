@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { projects } from "../../data/Projects"
+import { projects } from "@/app/data/Projects"
 
 const Projects = () => {
   return (

@@ -24,6 +24,7 @@ export default function About() {
                             src="/images/emmanuel-ose.jpg"
                             alt="Emmanuel Ose"
                             fill
+                            sizes="(max-width: 640px) 256px, 320px"
                             className="object-cover"
                         />
                     </div>
@@ -31,7 +32,7 @@ export default function About() {
 
                 {/* Right Column: Bio Content */}
                 <div className="flex flex-col gap-6">
-                    <div className="inline-block px-3 py-1 text-sm font-semibold text-blue-600 bg-blue-100 rounded-full w-fit">
+                    <div className="inline-block px-3 py-1 text-sm font-semibold text-blue-700 bg-blue-100 rounded-full w-fit">
                         About Me
                     </div>
 
