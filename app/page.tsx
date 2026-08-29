@@ -10,7 +10,6 @@ export default function Home() {
   return (
     <>
       <Navbar />
-
       <main>
         <Hero />
         <About />
@@ -18,8 +17,8 @@ export default function Home() {
         <Projects />
         <Experience />
         <Contact />
-        <Footer />
       </main>
+      <Footer />
     </>
   );
 }
