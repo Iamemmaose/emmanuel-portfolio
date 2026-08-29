@@ -11,13 +11,12 @@ const Hero = () => {
                     Hi, I'm Emmanuel Ose
                 </p>
 
-                <h1 className="max-w-3xl text-5xl font-bold tracking-tight md:text-7xl">
+                <h1 className="max-w-3xl text-5xl font-bold tracking-tight md:text-7xl text-black">
                     Frontend Developer
                 </h1>
 
                 <p className="mt-6 max-w-2xl text-lg leading-8 text-gray-600">
-                    I build modern, responsive, and user-focused web applications using
-                    React, Next.js, TypeScript, and modern frontend technologies.
+                    I help startups, founders, and growing businesses turn ideas and business challenges into practical digital solutions. I build responsive websites and modern web applications focused on real user needs and business goals.
                 </p>
 
                 <div className="mt-8 flex flex-wrap gap-4">
@@ -30,7 +29,7 @@ const Hero = () => {
 
                     <Link
                         href="#contact"
-                        className="rounded-lg border border-gray-300 px-6 py-3 font-medium transition hover:bg-gray-100"
+                        className="rounded-lg text-black border border-gray-300 px-6 py-3 font-medium transition hover:bg-gray-100"
                     >
                         Let's Connect
                     </Link>

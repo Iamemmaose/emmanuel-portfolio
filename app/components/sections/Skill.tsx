@@ -1,6 +1,18 @@
 import type { IconType } from "react-icons";
-import { FaHtml5, FaCss3Alt, FaReact, FaGitAlt, FaGithub, FaNodeJs } from "react-icons/fa";
-import { SiJavascript, SiTypescript, SiNextdotjs, SiTailwindcss, SiVercel, SiRedux, SiJest, SiPostgresql } from "react-icons/si";
+import {
+  FaHtml5,
+  FaCss3Alt,
+  FaReact,
+  FaGitAlt,
+  FaGithub,
+} from "react-icons/fa";
+import {
+  SiJavascript,
+  SiTypescript,
+  SiNextdotjs,
+  SiTailwindcss,
+  SiVercel,
+} from "react-icons/si";
 import { VscVscode } from "react-icons/vsc";
 
 interface Skill {
@@ -18,8 +30,9 @@ interface SkillCategory {
 const skillCategories: SkillCategory[] = [
   {
     id: 1,
-    title: "Core Frontend",
-    description: "Building responsive, type-safe, and interactive web applications.",
+    title: "Frontend Development",
+    description:
+      "Building responsive, accessible, and interactive web applications.",
     skills: [
       { name: "HTML5", icon: FaHtml5 },
       { name: "CSS3", icon: FaCss3Alt },
@@ -32,22 +45,12 @@ const skillCategories: SkillCategory[] = [
   },
   {
     id: 2,
-    title: "State & Architecture",
-    description: "Managing global application state and backend integrations.",
-    skills: [
-      { name: "Redux / Zustand", icon: SiRedux },
-      { name: "Node.js", icon: FaNodeJs },
-      { name: "PostgreSQL", icon: SiPostgresql },
-    ],
-  },
-  {
-    id: 3,
-    title: "Tools & Testing",
-    description: "Ensuring code quality, version control, and seamless deployment.",
+    title: "Development Tools",
+    description:
+      "Tools I use to build, manage, collaborate on, and deploy projects.",
     skills: [
       { name: "Git", icon: FaGitAlt },
       { name: "GitHub", icon: FaGithub },
-      { name: "Jest", icon: SiJest },
       { name: "Vercel", icon: SiVercel },
       { name: "VS Code", icon: VscVscode },
     ],
@@ -57,24 +60,24 @@ const skillCategories: SkillCategory[] = [
 const Skill = () => {
   return (
     <section id="skills" className="bg-white px-6 py-20">
-      <div className="mx-auto max-w-6xl ">
-        {/* Section heading */}
+      <div className="mx-auto max-w-6xl">
+        {/* Section Heading */}
         <div className="max-w-2xl">
           <p className="text-sm font-semibold text-blue-600">
             My Skills
           </p>
 
           <h2 className="mt-3 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            Technologies I use to build modern web experiences
+            Tools I use to build digital solutions
           </h2>
 
           <p className="mt-4 text-lg leading-8 text-gray-600">
-            My current frontend development skills and the tools I use to build,
-            manage, and deploy web applications.
+            My frontend development skills and the tools I use to turn ideas
+            into responsive, functional, and maintainable web applications.
           </p>
         </div>
 
-        {/* Skill categories */}
+        {/* Skill Categories */}
         <div className="mt-12 grid gap-6 md:grid-cols-2">
           {skillCategories.map((category) => (
             <article
@@ -89,7 +92,7 @@ const Skill = () => {
                 {category.description}
               </p>
 
-              {/* Individual skills */}
+              {/* Skills */}
               <div className="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-3">
                 {category.skills.map((skill) => {
                   const Icon = skill.icon;
@@ -120,3 +123,4 @@ const Skill = () => {
 };
 
 export default Skill;
+

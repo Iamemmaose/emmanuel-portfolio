@@ -4,43 +4,46 @@ import { projects } from "@/app/data/Projects";
 
 const Projects = () => {
     return (
-        <section id="projects" className="bg-gray-50 text-gray-800 py-20">
+        <section id="projects" className="bg-gray-50 py-20 text-gray-800">
             <div className="mx-auto max-w-6xl px-6">
-                {/* Section heading */}
+
+                {/* Section Heading */}
                 <div className="max-w-2xl">
                     <p className="text-sm font-semibold text-blue-600">
                         Featured Work
                     </p>
 
                     <h2 className="mt-3 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                        Projects I've Built
+                        Projects I’ve Built
                     </h2>
 
                     <p className="mt-4 text-lg leading-8 text-gray-600">
-                        A selection of projects that demonstrate my frontend development
-                        skills and experience building responsive, user-focused interfaces.
+                        A selection of projects where I’ve turned ideas and
+                        requirements into responsive, functional, and user-focused
+                        digital experiences.
                     </p>
                 </div>
 
-                {/* Project cards */}
+                {/* Project Cards */}
                 <div className="mt-12 grid gap-8 md:grid-cols-2">
                     {projects.map((project, index) => (
                         <article
                             key={project.id}
                             className="overflow-hidden rounded-xl border border-gray-200 bg-white transition hover:-translate-y-1 hover:shadow-lg"
                         >
-                            {/* Project image */}
+                            {/* Project Image */}
                             <div className="relative aspect-video w-full overflow-hidden bg-gray-100">
                                 <Image
                                     src={project.image}
                                     alt={`${project.title} project screenshot`}
                                     fill
                                     priority={index === 0}
-                                    className="object-cover"
+                                    sizes="(max-width: 768px) 100vw, 50vw"
+                                    className="object-cover transition duration-300 hover:scale-105"
                                 />
                             </div>
 
-                            {/* Project content */}
+                            {/* Project Content */}
                             <div className="p-6">
                                 <h3 className="text-xl font-bold text-gray-900">
                                     {project.title}
@@ -62,37 +65,39 @@ const Projects = () => {
                                     ))}
                                 </div>
 
-                                {/* Project links */}
-                                <div className="mt-6 flex flex-wrap gap-4">
+                                {/* Project Link */}
+                                <div className="mt-6">
                                     {project.liveUrl && (
                                         <Link
                                             href={project.liveUrl}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="rounded-lg bg-blue-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-blue-700"
+                                            className="inline-flex rounded-lg bg-blue-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-blue-700"
                                         >
-                                            Live Demo
+                                            View Live Project
                                         </Link>
                                     )}
                                 </div>
                             </div>
                         </article>
                     ))}
-                    
                 </div>
+
+                {/* GitHub */}
                 <div className="mt-12 text-center">
-                        <a
-                            href="https://github.com/Iamemmaose"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center gap-2 rounded-xl border border-gray-300 bg-white px-6 py-3 text-sm font-semibold text-gray-700 hover:bg-gray-50 transition"
-                        >
-                            See More Projects on GitHub
-                        </a>
-                    </div>
+                    <Link
+                        href="https://github.com/Iamemmaose"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center rounded-xl border border-gray-300 bg-white px-6 py-3 text-sm font-semibold text-gray-700 transition hover:bg-gray-50"
+                    >
+                        See More Projects on GitHub
+                    </Link>
+                </div>
             </div>
         </section>
     );
 };
 
 export default Projects;
+

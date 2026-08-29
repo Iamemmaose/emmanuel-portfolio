@@ -8,9 +8,8 @@ interface StatItem {
 
 const stats: StatItem[] = [
     { id: 1, label: "Years Experience", value: "1+" },
-    { id: 2, label: "Projects Completed", value: "10+" },
+    { id: 2, label: "Projects Completed", value: "5+" },
     { id: 3, label: "Technologies Used", value: "8+" },
-    { id: 3, label: "Mentees Taught", value: "50+" }
 ];
 
 export default function About() {
@@ -39,19 +38,16 @@ export default function About() {
                     </div>
 
                     <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-gray-900">
-                        Crafting scalable & modern web experiences
+                        Crafting modern digital solutions
                     </h2>
 
                     <p className="text-gray-600 leading-relaxed">
-                        Hello! I’m Emmanuel Ose, a software developer passionate about building
-                        clean, performant, and user-friendly applications. I focus on writing
-                        maintainable code with React, Next.js, and TypeScript.
+                        Hello! I’m Emmanuel Ose, a Frontend Developer focused on helping startups, founders, and growing businesses turn ideas and business challenges into practical digital solutions.
+                        My goal is simplly understanding the problem behind a project and building solutions that are useful, maintainable, and built around real user needs.
                     </p>
 
                     <p className="text-gray-600 leading-relaxed">
-                        When I'm not coding, I'm constantly learning new web technologies and
-                        improving my craft to deliver the best user experiences possible.
-                    </p>
+                        I’m constantly learning and improving my skills to build better digital experiences.                   </p>
 
                     {/* Quick Stats Grid */}
                     <div className="grid grid-cols-1 gap-6 border-t border-gray-200 pt-6 sm:grid-cols-3">
