@@ -49,27 +49,30 @@ const NavBar = () => {
           aria-label="Toggle navigation menu"
           aria-expanded={isMenuOpen}
         >
-          {isMenuOpen ? <IoMdClose /> : <CiMenuFries /> }
+          {isMenuOpen ? <IoMdClose /> : <CiMenuFries />}
         </button>
       </nav>
 
-       {isMenuOpen && (
-          <div className="absolute top-16 right-0 w-56 rounded-lg border border-gray-200 bg-white/95 p-4 shadow-lg md:hidden backdrop-blur">
-            <ul className="mx-auto flex max-w-6xl flex-col gap-4">
-              {navLinks.map((link) => (
-                <li key={link.id}>
-                  <Link
-                    href={link.href}
-                    onClick={() => setIsMenuOpen(false)}
-                    className="block text-sm font-medium text-gray-700 transition hover:text-blue-600"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        )}
+      <div
+        className={`absolute top-16 right-0 w-56 rounded-lg border border-gray-200 bg-white/95 p-4 shadow-lg backdrop-blur transition-all duration-300 ease-in-out md:hidden ${isMenuOpen
+            ? "visible translate-y-0 scale-100 opacity-100"
+            : "invisible -translate-y-2 scale-95 opacity-0"
+          }`}
+      >
+        <ul className="flex flex-col gap-4">
+          {navLinks.map((link) => (
+            <li key={link.id}>
+              <Link
+                href={link.href}
+                onClick={() => setIsMenuOpen(false)}
+                className="block text-sm font-medium text-gray-700 transition hover:text-blue-600"
+              >
+                {link.label}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
     </header>
   );
 };
