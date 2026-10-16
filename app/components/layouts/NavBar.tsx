@@ -54,7 +54,7 @@ const NavBar = () => {
       </nav>
 
       <div
-        className={`absolute top-16 right-0 w-56 rounded-lg border border-gray-200 bg-white/95 p-4 shadow-lg backdrop-blur transition-all duration-300 ease-in-out md:hidden ${isMenuOpen
+        className={`absolute top-16 right-0 w-full rounded-lg border border-gray-200 bg-white/95 p-4 shadow-lg backdrop-blur transition-all duration-300 ease-in-out md:hidden ${isMenuOpen
             ? "visible translate-y-0 scale-100 opacity-100"
             : "invisible -translate-y-2 scale-95 opacity-0"
           }`}
@@ -65,7 +65,7 @@ const NavBar = () => {
               <Link
                 href={link.href}
                 onClick={() => setIsMenuOpen(false)}
-                className="block text-sm font-medium text-gray-700 transition hover:text-blue-600"
+                className="block text-lg font-medium text-gray-700 transition hover:text-blue-600 capitalize"
               >
                 {link.label}
               </Link>
