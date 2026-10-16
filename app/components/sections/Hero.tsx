@@ -16,7 +16,7 @@ const Hero = () => {
                 </h1>
 
                 <p className="mt-6 max-w-2xl text-lg leading-8 text-gray-600">
-                    I help startups, founders, and growing businesses turn ideas and business challenges into practical digital solutions. I build responsive websites and modern web applications focused on real user needs and business goals.
+                 I have practical experience in building web applications using React, Next.js, Typescript, and Tailwind CSS. I turn figma design and ideas into functional and responsive web applications that are accessible, user-friendly and visually appealing. 
                 </p>
 
                 <div className="mt-8 flex flex-wrap gap-4">
