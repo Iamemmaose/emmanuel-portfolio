@@ -1,5 +1,6 @@
 import Image from "next/image"
 import FadeInMotion from "@/app/components/Motion"
+import { projects } from "@/app/data/Projects"
 
 interface StatItem {
     id: number,
@@ -9,7 +10,7 @@ interface StatItem {
 
 const stats: StatItem[] = [
     { id: 1, label: "Years Experience", value: "1+" },
-    { id: 2, label: "Projects Completed", value: "5+" },
+    { id: 2, label: "Projects Completed", value: `${projects.length}+` },
     { id: 3, label: "Technologies Used", value: "8+" },
 ];
 
@@ -28,7 +29,7 @@ export default function About() {
                                 fill
                                 sizes="(max-width: 640px) 256px, 320px"
                                 className="object-cover"
-                                loading="lazy"
+                                priority
                             />
                         </div>
                     </div>
