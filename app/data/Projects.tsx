@@ -8,7 +8,7 @@ export const projects: Project[] = [
             "A modern church platform built to make information, resources, events, and community engagement easier to access through a responsive digital experience.",
         technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
         image: "/projects/Theking'sheriatge.png",
-        liveUrl: "https://tkh-next.netlify.app/",
+        liveUrl: "https://www.thekingsheritage.org",
     },
     {
         id: 2,

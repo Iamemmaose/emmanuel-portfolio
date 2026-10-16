@@ -26,9 +26,9 @@ export default function About() {
                                 src="/images/emmanuel-ose.jpg"
                                 alt="Emmanuel Ose"
                                 fill
-                                priority
                                 sizes="(max-width: 640px) 256px, 320px"
                                 className="object-cover"
+                                loading="lazy"
                             />
                         </div>
                     </div>
@@ -46,7 +46,7 @@ export default function About() {
                         </h2>
 
                         <p className="text-gray-600 leading-relaxed">
-                            Hello! I’m Emmanuel Ose, a Frontend Developer focused on helping startups, founders, and growing businesses turn ideas and business challenges into practical digital solutions.
+                            Hello! I’m Emmanuel Ose, a Frontend Developer focused on turning ideas and business requirement into practical digital solutions.
                             My goal is simply understanding the problem behind a project and building solutions that are useful, maintainable, and built around real user needs.
                         </p>
 
