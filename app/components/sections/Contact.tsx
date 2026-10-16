@@ -8,7 +8,7 @@ const Contact = () => {
       <div className="mx-auto max-w-6xl">
         {/* Section Heading */}
         <FadeInMotion>
-          <div className="mx-auto max-w-2xl text-center">
+          <div className="mx-auto max-w-2xl text-center capitalize">
             <p className="text-sm font-semibold text-blue-600">
               Get In Touch
             </p>

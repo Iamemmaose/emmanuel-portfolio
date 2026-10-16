@@ -4,7 +4,7 @@ import FadeInMotion from "@/app/components/Motion"
 const ExperienceSection = () => {
   return (
     <section id="experience" className="bg-white py-20 text-gray-800">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-6 capitalize">
         {/* Section Heading */}
         <FadeInMotion>
           <div className="max-w-2xl">

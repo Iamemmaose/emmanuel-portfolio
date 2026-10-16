@@ -1,5 +1,5 @@
 import Link from "next/link";
-import TechStackOrbit from "@/app/components/stack";
+import Image from "next/image";
 
 const Hero = () => {
     return (
@@ -8,7 +8,7 @@ const Hero = () => {
             className="flex min-h-screen items-center bg-white px-6 py-20"
         >
             <div className="mx-auto flex w-full max-w-6xl flex-col items-center gap-10 lg:flex-row lg:justify-between">
-                <div className="w-full lg:flex-1">
+                <div className="w-full lg:flex-1 capitalize">
                     <p className="mb-4 text-lg font-medium text-blue-600">
                         Hi, I'm Emmanuel Ose
                     </p>
@@ -43,8 +43,17 @@ const Hero = () => {
                         <span>Tailwind CSS</span>
                     </div>
                 </div>
-                <div className="w-full max-w-[440px] shrink-0 lg:w-[40%]">
-                    <TechStackOrbit />
+                <div className="flex justify-center">
+                    <div className="relative h-64 w-64 overflow-hidden rounded-2xl border-4 border-white shadow-xl sm:h-80 sm:w-80">
+                        <Image
+                            src="/images/emmanuel-ose.jpg"
+                            alt="Emmanuel Ose"
+                            fill
+                            sizes="(max-width: 640px) 256px, 320px"
+                            className="object-cover"
+                            priority
+                        />
+                    </div>
                 </div>
             </div>
         </section>

@@ -6,11 +6,11 @@ import FadeInMotion from "@/app/components/Motion"
 const Projects = () => {
     return (
         <section id="projects" className="bg-gray-50 py-20 text-gray-800">
-            <div className="mx-auto max-w-6xl px-6">
+            <div className="mx-auto max-w-6xl px-6 capitalize">
 
                 {/* Section Heading */}
                 <FadeInMotion>
-                    <div className="max-w-2xl">
+                    <div className="max-w-2xl capitalize">
                         <p className="text-sm font-semibold text-blue-600">
                             Featured Work
                         </p>

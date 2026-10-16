@@ -8,7 +8,7 @@ export default function Services() {
 
                 {/* Section Heading */}
                 <FadeInMotion>
-                    <div className="max-w-2xl">
+                    <div className="max-w-2xl capitalize">
                         <p className="text-sm font-semibold text-blue-600">
                             My Services
                         </p>

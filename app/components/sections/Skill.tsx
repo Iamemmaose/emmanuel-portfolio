@@ -62,7 +62,7 @@ const skillCategories: SkillCategory[] = [
 const Skill = () => {
   return (
     <section id="skills" className="bg-white px-6 py-20">
-      <div className="mx-auto max-w-6xl">
+      <div className="mx-auto max-w-6xl capitalize">
         {/* Section Heading */}
         <FadeInMotion>
           <div className="max-w-2xl">

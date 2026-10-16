@@ -17,34 +17,25 @@ const stats: StatItem[] = [
 export default function About() {
     return (
         <section id="about" className="py-20 bg-gray-50 text-gray-800">
-            <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 ">
 
                 {/* Left Column: Image or Visual Placeholder */}
                 <FadeInMotion>
-                    <div className="flex justify-center">
-                        <div className="relative h-64 w-64 overflow-hidden rounded-2xl border-4 border-white shadow-xl sm:h-80 sm:w-80">
-                            <Image
-                                src="/images/emmanuel-ose.jpg"
-                                alt="Emmanuel Ose"
-                                fill
-                                sizes="(max-width: 640px) 256px, 320px"
-                                className="object-cover"
-                                priority
-                            />
-                        </div>
-                    </div>
-                </FadeInMotion>
-
-                {/* Right Column: Bio Content */}
-                <FadeInMotion>
-                    <div className="flex flex-col gap-6">
-                        <div className="text-sm font-semibold text-blue-600">
+                    <div className="capitalize">
+                        <div className="text-sm font-semibold text-blue-600 mb-2">
                             About Me
                         </div>
 
                         <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-gray-900">
                             Crafting modern digital solutions
                         </h2>
+                    </div>
+                </FadeInMotion>
+
+                {/* Right Column: Bio Content */}
+                <FadeInMotion>
+                    <div className="flex flex-col gap-6">
+
 
                         <p className="text-gray-600 leading-relaxed">
                             Hello! I’m Emmanuel Ose, a Frontend Developer focused on turning ideas and business requirement into practical digital solutions.
