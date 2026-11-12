@@ -6,12 +6,13 @@ import { IoMdClose } from "react-icons/io";
 import { CiMenuFries } from "react-icons/ci";
 
 const navLinks = [
-  { id: 1, label: "Home", href: "#home" },
-  { id: 2, label: "About", href: "#about" },
-  { id: 3, label: "Skills", href: "#skills" },
-  { id: 4, label: "Projects", href: "#projects" },
-  { id: 5, label: "Experience", href: "#experience" },
-  { id: 6, label: "Contact", href: "#contact" },
+  { id: 1, label: "Home", href: "/#home" },
+  { id: 2, label: "About", href: "/#about" },
+  { id: 3, label: "Skills", href: "/#skills" },
+  { id: 4, label: "Projects", href: "/#projects" },
+  { id: 5, label: "Experience", href: "/#experience" },
+  { id: 6, label: "Blog", href: "/blog" },
+  { id: 7, label: "Contact", href: "/#contact" },
 ];
 
 const NavBar = () => {
@@ -24,7 +25,7 @@ const NavBar = () => {
         className="mx-auto flex h-16 max-w-6xl items-center justify-between"
       >
         <Link
-          href="#home"
+          href="/#home"
           className="text-lg font-bold tracking-tight text-gray-900"
         >
           Emmanuel Ose
@@ -55,8 +56,8 @@ const NavBar = () => {
 
       <div
         className={`absolute top-16 right-0 w-full rounded-lg border border-gray-200 bg-white/95 p-4 shadow-lg backdrop-blur transition-all duration-300 ease-in-out md:hidden ${isMenuOpen
-            ? "visible translate-y-0 scale-100 opacity-100"
-            : "invisible -translate-y-2 scale-95 opacity-0"
+          ? "visible translate-y-0 scale-100 opacity-100"
+          : "invisible -translate-y-2 scale-95 opacity-0"
           }`}
       >
         <ul className="flex flex-col gap-4">
